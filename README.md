@@ -1,4 +1,6 @@
-# Pokemon Citydex Warsaw
+# Pokemon_Warsaw
+
+Catch the Pokemon that I researched during my semester abroad.
 
 Static Vite app prepared to run at `/pokemon/`, so it can live under `mocadau.com/pokemon` next to a future portfolio homepage.
 
