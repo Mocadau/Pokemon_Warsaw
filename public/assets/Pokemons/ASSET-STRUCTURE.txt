@@ -1,0 +1,42 @@
+Pokemon asset structure
+
+Each Pokemon has its own folder:
+`/public/assets/Pokemons/<Name>/`
+
+Required structure for all new Pokemon:
+- `<Name>.jpeg` (location photo with GPS metadata)
+- `spawn<Name>.mp4`
+- `throw<Name>.mp4`
+- `pixel/<Name>.png`
+
+After adding the files, extract the GPS coordinates from `<Name>.jpeg` and add
+the finished Pokemon entry to `data/pokemonSpots.js` and
+`public/assets/PokemonLocation/GPS-REFERENCE.json`.
+
+Ready folders:
+- Pikachu
+- Machop
+- Bisasam
+- Grimer
+- Shiggy
+- Pidgeot
+- Growlithe
+- Electabuzz
+- Zubat
+- Gastly
+- Regice
+- Scyther
+- Charizard
+- Onix
+- Evoly
+- Tangela
+- Garados
+- Mudkip
+- Darkrai
+- Manaphy
+- Luxray
+- Treecko
+- Celebi
+
+Prepared folders waiting for assets:
+- None

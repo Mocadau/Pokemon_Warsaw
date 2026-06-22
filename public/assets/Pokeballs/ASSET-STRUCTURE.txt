@@ -1,0 +1,20 @@
+Pokeball animation structure
+
+Animation folders are prepared here:
+`/public/assets/Pokeballs/<ball>/animations/`
+
+Add these files inside each prepared animation folder:
+- `Waiting.mp4`
+- `Catch.mp4`
+- `Escape.mp4`
+
+Prepared ball folders:
+- `poke-ball`
+- `net-ball`
+- `luxury-ball`
+- `safari-ball`
+- `dusk-ball`
+- `premier-ball`
+
+Current app fallback:
+- If no custom animation is wired yet, the app still uses `Normal/Waiting.mp4`, `Normal/Catch.mp4`, and `Normal/Escape.mp4`.

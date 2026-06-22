@@ -1,0 +1,209 @@
+[
+  {
+    "id": 1,
+    "name": "Pikachu",
+    "locationName": "Warsaw Center",
+    "lat": 52.2297,
+    "lng": 21.0122,
+    "pokeballSlug": "poke-ball",
+    "assetFolder": "/assets/Pokemons/Pikachu"
+  },
+  {
+    "id": 2,
+    "name": "Machop",
+    "locationName": "Grail Cut, Koszykowa 33, Warsaw",
+    "lat": 52.22214166666667,
+    "lng": 21.018275,
+    "pokeballSlug": "poke-ball",
+    "assetFolder": "/assets/Pokemons/Machop"
+  },
+  {
+    "id": 3,
+    "name": "Bisasam",
+    "locationName": "Radna 2/4, Warsaw",
+    "lat": 52.24128666666667,
+    "lng": 21.0251,
+    "pokeballSlug": "poke-ball",
+    "assetFolder": "/assets/Pokemons/Bisasam"
+  },
+  {
+    "id": 4,
+    "name": "Grimer",
+    "locationName": "Koszykowa Street, Warsaw",
+    "lat": 52.22221666666667,
+    "lng": 21.01726666666667,
+    "pokeballSlug": "poke-ball",
+    "assetFolder": "/assets/Pokemons/Grimer"
+  },
+  {
+    "id": 5,
+    "name": "Shiggy",
+    "locationName": "Bulwar Pattona, Warsaw",
+    "lat": 52.24191333333334,
+    "lng": 21.03051383333333,
+    "pokeballSlug": "poke-ball",
+    "assetFolder": "/assets/Pokemons/Shiggy"
+  },
+  {
+    "id": 6,
+    "name": "Pidgeot",
+    "locationName": "Dobra 56/66, Warsaw",
+    "lat": 52.24252833333333,
+    "lng": 21.02632216666667,
+    "pokeballSlug": "poke-ball",
+    "assetFolder": "/assets/Pokemons/Pidgeot"
+  },
+  {
+    "id": 7,
+    "name": "Growlithe",
+    "locationName": "Skyliner, Prosta 67, Warsaw",
+    "lat": 52.22871333333333,
+    "lng": 20.98395833333333,
+    "pokeballSlug": "net-ball",
+    "assetFolder": "/assets/Pokemons/Growlithe"
+  },
+  {
+    "id": 8,
+    "name": "Electabuzz",
+    "locationName": "Zabka, Lucka 18, Warsaw",
+    "lat": 52.23245333333333,
+    "lng": 20.98835833333333,
+    "pokeballSlug": "net-ball",
+    "assetFolder": "/assets/Pokemons/Electabuzz"
+  },
+  {
+    "id": 9,
+    "name": "Zubat",
+    "locationName": "Zajecza 11, Warsaw",
+    "lat": 52.23853666666667,
+    "lng": 21.02609716666667,
+    "pokeballSlug": "net-ball",
+    "assetFolder": "/assets/Pokemons/Zubat"
+  },
+  {
+    "id": 10,
+    "name": "Gastly",
+    "locationName": "Centrum LIM, Aleje Jerozolimskie 65/79, Warsaw",
+    "lat": 52.22802,
+    "lng": 21.005325,
+    "pokeballSlug": "luxury-ball",
+    "assetFolder": "/assets/Pokemons/Gastly"
+  },
+  {
+    "id": 11,
+    "name": "Regice",
+    "locationName": "Droga Oswalda Balzera, Zakopane area",
+    "lat": 49.20105833333334,
+    "lng": 20.07115283333333,
+    "pokeballSlug": "luxury-ball",
+    "assetFolder": "/assets/Pokemons/Regice"
+  },
+  {
+    "id": 12,
+    "name": "Scyther",
+    "locationName": "Scyther catch spot",
+    "lat": 52.22281,
+    "lng": 21.007502,
+    "pokeballSlug": "safari-ball",
+    "assetFolder": "/assets/Pokemons/Scyther"
+  },
+  {
+    "id": 13,
+    "name": "Charizard",
+    "locationName": "Smocza Jama, Krakow",
+    "lat": 50.05357216666667,
+    "lng": 19.93323666666667,
+    "pokeballSlug": "poke-ball",
+    "assetFolder": "/assets/Pokemons/Charizard"
+  },
+  {
+    "id": 14,
+    "name": "Onix",
+    "locationName": "Dobra 42, Warsaw",
+    "lat": 52.24071166666667,
+    "lng": 21.02761383333333,
+    "pokeballSlug": "dusk-ball",
+    "assetFolder": "/assets/Pokemons/Onix"
+  },
+  {
+    "id": 15,
+    "name": "Evoly",
+    "locationName": "Dobra 56/66, Warsaw",
+    "lat": 52.242175,
+    "lng": 21.02462783333333,
+    "pokeballSlug": "premier-ball",
+    "assetFolder": "/assets/Pokemons/Evoly"
+  },
+  {
+    "id": 16,
+    "name": "Tangela",
+    "locationName": "Tangela photo location",
+    "lat": 52.24212,
+    "lng": 21.0247695,
+    "pokeballSlug": "poke-ball",
+    "assetFolder": "/assets/Pokemons/Tangela"
+  },
+  {
+    "id": 17,
+    "name": "Garados",
+    "locationName": "Garados photo location",
+    "lat": 52.24603666666667,
+    "lng": 21.02517216666667,
+    "pokeballSlug": "luxury-ball",
+    "assetFolder": "/assets/Pokemons/Garados"
+  },
+  {
+    "id": 18,
+    "name": "Mudkip",
+    "locationName": "Mudkip photo location",
+    "lat": 49.31808333333333,
+    "lng": 19.953955,
+    "pokeballSlug": "lure-ball",
+    "assetFolder": "/assets/Pokemons/Mudkip"
+  },
+  {
+    "id": 19,
+    "name": "Darkrai",
+    "locationName": "Darkrai photo location",
+    "lat": 52.24933333333333,
+    "lng": 20.99971333333333,
+    "pokeballSlug": "dream-ball",
+    "assetFolder": "/assets/Pokemons/Darkrai"
+  },
+  {
+    "id": 20,
+    "name": "Manaphy",
+    "locationName": "Manaphy photo location",
+    "lat": 52.24468666666667,
+    "lng": 21.0252305,
+    "pokeballSlug": "net-ball",
+    "assetFolder": "/assets/Pokemons/Manaphy"
+  },
+  {
+    "id": 21,
+    "name": "Luxray",
+    "locationName": "Luxray photo location",
+    "lat": 52.23392833333333,
+    "lng": 21.01205,
+    "pokeballSlug": "fast-ball",
+    "assetFolder": "/assets/Pokemons/Luxray"
+  },
+  {
+    "id": 22,
+    "name": "Treecko",
+    "locationName": "Treecko photo location",
+    "lat": 52.22611166666667,
+    "lng": 20.99965,
+    "pokeballSlug": "nest-ball",
+    "assetFolder": "/assets/Pokemons/Treecko"
+  },
+  {
+    "id": 23,
+    "name": "Celebi",
+    "locationName": "Celebi photo location",
+    "lat": 48.12707783333333,
+    "lng": 6.912408333333333,
+    "pokeballSlug": "net-ball",
+    "assetFolder": "/assets/Pokemons/Celebi"
+  }
+]

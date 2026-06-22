@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="%BASE_URL%assets/pikachu.png" />
+    <title>Pokemon Citydex Warsaw</title>
+  </head>
+  <body>
+    <header class="progress-banner">
+      <div class="hero-copy">
+        <span class="hero-kicker">Trainer Travel Log</span>
+        <h1><span>Pokémon</span> Citydex <em>Warsaw</em></h1>
+        <p>Track hidden encounters, lock the Poké Ball, and complete the collection.</p>
+      </div>
+      <div class="progress-meta">
+        <div id="current-time" class="progress-clock">--:--:--</div>
+        <div id="progress-counter" class="progress-counter">Caught: 0 / 0 · Attempts: 0</div>
+      </div>
+    </header>
+
+    <main class="map-shell">
+      <section class="map-board" aria-label="Pokemon overworld map">
+        <div class="map-board__topbar">
+          <div>
+            <span class="map-board__eyebrow">CITYDEX FIELD MAP</span>
+            <strong>Warsaw Region</strong>
+          </div>
+          <span class="map-board__status"><i></i> GPS ONLINE</span>
+        </div>
+        <div class="map-stage">
+          <div id="map" aria-label="Pokemon map of Warsaw"></div>
+          <div class="map-stage__texture" aria-hidden="true"></div>
+          <div class="map-stage__compass" aria-hidden="true"><span>N</span></div>
+          <div class="map-stage__legend" aria-hidden="true">
+            <span><i class="legend-dot legend-dot--wild"></i> Wild Pokemon</span>
+            <span><i class="legend-dot legend-dot--route"></i> Trainer route</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section class="collection-bar" aria-label="Your collection">
+      <div class="collection-header">
+        <div>
+          <span class="collection-kicker">CITYDEX STORAGE</span>
+          <h2>Pokémon Roster</h2>
+        </div>
+        <span id="collection-hint"></span>
+      </div>
+      <div id="collection-list" class="collection-list" role="listbox"></div>
+    </section>
+    <button id="reset-progress-btn" class="reset-btn" type="button" aria-label="Reset progress">
+      Reset
+    </button>
+
+    <div id="travel-prompt" class="travel-prompt hidden" aria-hidden="true">
+      <div class="travel-prompt__card" role="dialog" aria-modal="true" aria-labelledby="travel-prompt-title">
+        <div class="travel-prompt__header">
+          <span class="travel-prompt__eyebrow">Pidgeot Air Service</span>
+          <span class="travel-prompt__chip">AIR ROUTE</span>
+        </div>
+        <div class="travel-prompt__body">
+          <div class="travel-prompt__art">
+            <img src="%BASE_URL%assets/Pokemons/Pidgeot/Pidgeot.png" alt="Pidgeot air travel" loading="lazy" decoding="async" />
+          </div>
+          <div class="travel-prompt__content">
+            <h3 id="travel-prompt-title">Fly to destination?</h3>
+            <p id="travel-prompt-text"></p>
+            <div id="travel-prompt-route" class="travel-prompt__route"></div>
+          </div>
+        </div>
+        <div class="travel-prompt__actions">
+          <button id="travel-prompt-cancel" class="travel-prompt__button travel-prompt__button--secondary" type="button">
+            Stay Here
+          </button>
+          <button id="travel-prompt-confirm" class="travel-prompt__button travel-prompt__button--primary" type="button">
+            Fly Now
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="capture-overlay" class="capture-overlay hidden" aria-hidden="true">
+      <div class="capture-shell retro-shell">
+        <button id="capture-close-btn" class="modal-close" aria-label="Escape">Escape</button>
+        <div class="capture-layout retro-layout">
+          <div class="capture-main retro-screen">
+            <div class="console-top">
+              <span class="console-label">CITYDEX ADVANCE</span>
+              <span class="console-led"></span>
+            </div>
+            <div class="capture-visual">
+              <video
+                id="capture-video"
+                class="capture-media hidden"
+                playsinline
+                autoplay
+                muted
+                loop
+                preload="auto"
+                aria-label="Pokemon encounter animation"
+              ></video>
+              <img id="capture-image" class="capture-media hidden" src="" alt="Pokemon encounter animation" />
+              <div id="capture-stars" class="capture-stars hidden" aria-hidden="true">
+                <span class="star star-1">★</span>
+                <span class="star star-2">★</span>
+                <span class="star star-3">★</span>
+              </div>
+              <div id="capture-stamp" class="capture-stamp hidden">
+                <span class="capture-stamp__top">Gotcha!</span>
+                <span id="capture-stamp-message" class="capture-stamp__bottom"></span>
+              </div>
+            </div>
+            <div class="retro-info">
+              <div id="capture-status-text" class="capture-status-text">
+                Preparing the encounter...
+              </div>
+              <div id="capture-story" class="capture-story">
+                A sudden burst of static over Warsaw signals an Electric-type nearby.
+              </div>
+            </div>
+            <div id="game-section" class="game-section hidden">
+              <div class="game-top-row">
+                <span>Catch Sequence</span>
+                <div class="timer-bar"><div id="timer-fill"></div></div>
+              </div>
+              <div class="game-meta">
+                <span id="game-difficulty" class="difficulty-chip">Difficulty: ???</span>
+                <span id="game-words" class="words-chip">Sequence: ???</span>
+              </div>
+              <div id="sequence-display" class="sequence-display" aria-live="polite"></div>
+              <div id="game-feedback" class="game-feedback info">
+                Start typing when you are ready.
+              </div>
+            </div>
+            <div class="retro-bottom-lights">
+              <span class="led led-ready">READY</span>
+              <span class="led led-capture">CAPTURE</span>
+            </div>
+          </div>
+          <aside class="capture-sidebar pokedex-panel" id="capture-sidebar">
+            <div class="pokedex-header">
+              <span class="pokedex-title">Pokédex</span>
+              <div class="pokedex-leds">
+                <span class="dex-led"></span>
+                <span class="dex-led"></span>
+              </div>
+            </div>
+            <div id="sidebar-info" class="sidebar-content hidden">
+              <div class="pokedex-number">No. <span id="sidebar-number">???</span></div>
+              <h3 id="sidebar-name" class="sidebar-name">???</h3>
+              <p id="sidebar-species" class="sidebar-species">Unknown species</p>
+              <div class="pokedex-grid">
+                <div class="pokedex-row">
+                  <span class="pokedex-label">Type</span>
+                  <span id="sidebar-type" class="pokedex-value">???</span>
+                </div>
+                <div class="pokedex-row">
+                  <span class="pokedex-label">Category</span>
+                  <span id="sidebar-category" class="pokedex-value">???</span>
+                </div>
+                <div class="pokedex-row">
+                  <span class="pokedex-label">Height</span>
+                  <span id="sidebar-height" class="pokedex-value">???</span>
+                </div>
+                <div class="pokedex-row">
+                  <span class="pokedex-label">Weight</span>
+                  <span id="sidebar-weight" class="pokedex-value">???</span>
+                </div>
+                <div class="pokedex-row">
+                  <span class="pokedex-label">Ability</span>
+                  <span id="sidebar-ability" class="pokedex-value">???</span>
+                </div>
+                <div class="pokedex-row">
+                  <span class="pokedex-label">Habitat</span>
+                  <span id="sidebar-habitat" class="pokedex-value">???</span>
+                </div>
+                <div class="pokedex-row">
+                  <span class="pokedex-label">Weakness</span>
+                  <span id="sidebar-weakness" class="pokedex-value">???</span>
+                </div>
+                <div class="pokedex-row">
+                  <span class="pokedex-label">Difficulty</span>
+                  <span id="sidebar-difficulty" class="pokedex-value">???</span>
+                </div>
+                <div class="pokedex-row">
+                  <span class="pokedex-label">Location</span>
+                  <span id="sidebar-location" class="pokedex-value">???</span>
+                </div>
+                <div class="pokedex-row">
+                  <span class="pokedex-label">Status</span>
+                  <span id="sidebar-status" class="pokedex-value">Encrypted</span>
+                </div>
+                <div class="pokedex-row">
+                  <span class="pokedex-label">Time</span>
+                  <span id="sidebar-time" class="pokedex-value">???</span>
+                </div>
+                <div class="pokedex-row">
+                  <span class="pokedex-label">Attempts</span>
+                  <span id="sidebar-attempts" class="pokedex-value">???</span>
+                </div>
+              </div>
+              <p id="sidebar-entry" class="sidebar-entry">Dex data locked.</p>
+            </div>
+            <p id="sidebar-hint" class="sidebar-hint">Catch the Pokemon to unlock the full Pokédex entry.</p>
+            <div id="retry-area" class="retry-area hidden">
+              <button id="retry-button" class="secondary-btn">Retry Encounter</button>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
